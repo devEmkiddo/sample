@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:wght@300&family=Roboto+Slab&display=swap');
+*{
+  font-family: 'Anton', sans-serif;
+  font-family: 'Kanit', sans-serif;
+  font-family: 'Roboto Slab', serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.first{
+  margin-top: 10em;
+}
+.main{
+  /* border: 1px solid black; */
+  height: 60vh;
+  width: 80%;
+  min-width: 50%;
+  margin: 6em auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.main-child{
+  display: flex;
+  gap: 3em;
+}
+
+.about, .claim{
+  border-radius: 20px;
+  padding: 2em;
+  background: hsla(0, 0%, 100%, 0.35);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(0px);
+  border: 1px solid rgba(255,255,255,0.175);
+  margin-bottom: 10em;
+}
+body{
+ background-image: url(img/back.jpg);
+ 
+ background-size: cover;
+ background-position: center;
+}
+@media (max-width: 880px) {
+  .main-child{
+   flex-direction: column;
+  }
+
+  .about, .claim{
+    margin-bottom: 0;
+  }
+  .claim{
+    margin-bottom: 6em;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width: 500px) {
+  .btnnn{
+    width: 120px;
+  }
+  .about, .claim{
+    margin-bottom: 0;
+  }
+  .claim{
+    margin-bottom: 6em;
+  }
+}
+.btnn{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: rgb(34, 33, 30);
+  border: 0;
+  opacity: 10px;
+}
+
+.btn:hover{
+  background-color: black;
+}
+.btnnn{
+  border-radius: 20px;
+}
+.bu{
+  background-color: rgb(208, 245, 245);
+  border-radius: 20px;
+  display: flex;
+  margin: 0 auto;
+  padding: .4em;
+}
+.bu:hover{
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.socials{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a{
+  text-decoration: none;
+  padding-top: .5em;
+}
+
+a:hover{
+  color: black;
+}
+p , h5{
+  color: black;
+  font-size: medium;
+  font-weight: 500;
+}
+
+.air{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
